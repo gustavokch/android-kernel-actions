@@ -36,7 +36,7 @@ msg "Updating container..."
 apt update && apt upgrade -y
 msg "Installing essential packages..."
 apt install -y --no-install-recommends git make bc bison openssl \
-    curl zip kmod cpio qemu-utils qemu-user qemu-user-binfmt qemu-system-x86 flex libelf-dev libssl-dev libtfm-dev wget \
+    curl zip kmod cpio qemu-utils qemu-user qemu-user-binfmt qemu-system-x86 qemu-system-arm flex libelf-dev libssl-dev libtfm-dev wget \
     device-tree-compiler ca-certificates python3 python2 xz-utils
 ln -sf "/usr/bin/python${python_version}" /usr/bin/python
 set_output hash "$(cd "$kernel_path" && git rev-parse HEAD || exit 127)"
